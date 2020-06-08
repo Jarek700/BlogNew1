@@ -1,0 +1,44 @@
+﻿@model ViewDataDictionary <BlogNew1.Models.Artykuly>
+@{
+    ViewBag.Title = "Strona główna";
+}
+
+<div class="jumbotron">
+    <h1>Blog o wszystkim</h1>
+    <p class="lead">Na tym blogu przeczytasz najbardziej niesamowite informacje dotyczące motoryzacji i ozdób balkonowych</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    @{
+        foreach (var artykul in Model)
+        {
+            <p>
+                @artykul.Id, @artykul.Tytul , @artykul.TekstArtykulu
+            </p>
+            <div class="col-md-4">
+                <h2>@artykul.Tytul</h2>
+                <p>
+                    @artykul.TekstArtykulu
+                </p>
+                <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
+            </div>
+        }
+    }
+</div>
+            
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>2JZ GTE wciąż wymiata</h2>
+        <p>
+            Dlaczego 2JZ "tu dżej zi" jest wciąż jednym z najlepszych silników do tuningu?
+        </p>
+        <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>1.8T vs 2JZ</h2>
+        <p>Czyli dlaczego japończyk masakruje niemca</p>
+        <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
+    </div>
+</div>
