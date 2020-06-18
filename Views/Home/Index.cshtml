@@ -1,4 +1,4 @@
-﻿@model ViewDataDictionary <BlogNew1.Models.Artykuly>
+﻿@model BlogNew1.Models.Artykuly
 @{
     ViewBag.Title = "Strona główna";
 }
@@ -9,24 +9,24 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
-<div class="row">
-    @{
-        foreach (var artykul in Model)
-        {
-            <p>
-                @artykul.Id, @artykul.Tytul , @artykul.TekstArtykulu
-            </p>
-            <div class="col-md-4">
-                <h2>@artykul.Tytul</h2>
+@*<div class="row">
+        @{
+            foreach (var artykuly in Model)
+            {
                 <p>
-                    @artykul.TekstArtykulu
+                    @artykuly.Tytul , @artykuly.TekstArtykulu
                 </p>
-                <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
-            </div>
+                <div class="col-md-4">
+                    <h2>@artykuly.Tytul</h2>
+                    <p>
+                        @artykuly.TekstArtykulu
+                    </p>
+                    <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
+                </div>
+            }
         }
-    }
-</div>
-            
+    </div>*@
+
 
 <div class="row">
     <div class="col-md-4">
@@ -36,9 +36,13 @@
         </p>
         <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-4">
-        <h2>1.8T vs 2JZ</h2>
-        <p>Czyli dlaczego japończyk masakruje niemca</p>
-        <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
-    </div>
+</div>
+
+<div>
+    @Html.Action("PokazGodzine", "Zegarek")   
+    @* Controller Zegarek trzeba użyć bez słówka controller bo niedziała *@
+</div>
+<div>
+   Godzina2: @Html.Action("PokazGodzine2", "Zegarek")
+    @* Controller Zegarek trzeba użyć bez słówka controller bo niedziała *@
 </div>

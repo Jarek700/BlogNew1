@@ -12,6 +12,7 @@ namespace BlogNew1.Models
         public int Id { get; set; }
         public string Tytul { get; set; }
         public string Wstep { get; set; }
+        [field.type]
         public string TekstArtykulu { get; set; }
     }
 }

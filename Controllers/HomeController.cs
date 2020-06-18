@@ -28,9 +28,13 @@ namespace BlogNew1.Models
                 ArtykulyContext db = new ArtykulyContext();
                 db.Artykuly.Add(artykuly);
                 db.SaveChanges();
-                
                 return View("DodajArtykul");
             }
+        }
+        [HttpGet]
+        public ActionResult DodajArtykul()
+        {
+                return View();
         }
     }
 }
