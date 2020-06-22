@@ -80,3 +80,6 @@ C:\Users\user\source\repos\BlogNew1\obj\Debug\BlogNew1.csproj.CoreCompileInputs.
 C:\Users\user\source\repos\BlogNew1\obj\Debug\BlogNew1.csproj.CopyComplete
 C:\Users\user\source\repos\BlogNew1\obj\Debug\BlogNew1.dll
 C:\Users\user\source\repos\BlogNew1\obj\Debug\BlogNew1.pdb
+C:\Users\user\source\repos\BlogNew1\obj\Debug\BlogNew1.Migrations.InitialCreate.resources
+C:\Users\user\source\repos\BlogNew1\obj\Debug\BlogNew1.csproj.GenerateResource.cache
+C:\Users\user\source\repos\BlogNew1\obj\Debug\BlogNew1.Migrations.dodanieDaty.resources

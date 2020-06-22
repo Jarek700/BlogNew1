@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-Sketchy1.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -119,6 +120,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006021016252_InitialCreate.cs" />
+    <Compile Include="Migrations\202006021016252_InitialCreate.designer.cs">
+      <DependentUpon>202006021016252_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006221101559_dodanieDaty.cs" />
+    <Compile Include="Migrations\202006221101559_dodanieDaty.designer.cs">
+      <DependentUpon>202006221101559_dodanieDaty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Artykuly.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,6 +161,14 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Zegarek\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006021016252_InitialCreate.resx">
+      <DependentUpon>202006021016252_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006221101559_dodanieDaty.resx">
+      <DependentUpon>202006221101559_dodanieDaty.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
