@@ -9,17 +9,26 @@
     <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
 </div>
 
+
+<h2>
+    @ViewBag.Tytul
+</h2>
+<p>
+    @ViewBag.TekstArtykulu
+</p>
+
+
 @*<div class="row">
         @{
-            foreach (var artykuly in Model)
+            foreach (var artykul in Model)
             {
                 <p>
-                    @artykuly.Tytul , @artykuly.TekstArtykulu
+                    @artykul.Tytul , @artykul.TekstArtykulu
                 </p>
                 <div class="col-md-4">
-                    <h2>@artykuly.Tytul</h2>
+                    <h2>@artykul.Tytul</h2>
                     <p>
-                        @artykuly.TekstArtykulu
+                        @artykul.TekstArtykulu
                     </p>
                     <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
                 </div>
@@ -39,10 +48,10 @@
 </div>
 
 <div>
-    @Html.Action("PokazGodzine", "Zegarek")   
+    @Html.Action("PokazGodzine", "Zegarek")
     @* Controller Zegarek trzeba użyć bez słówka controller bo niedziała *@
 </div>
 <div>
-   Godzina2: @Html.Action("PokazGodzine2", "Zegarek")
+    Godzina2: @Html.Action("PokazGodzine2", "Zegarek")
     @* Controller Zegarek trzeba użyć bez słówka controller bo niedziała *@
 </div>
