@@ -1,0 +1,50 @@
+﻿@model BlogNew1.Models.Artykuly
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Artykuly</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tytul)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tytul)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wstep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wstep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TekstArtykulu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TekstArtykulu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDodania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDodania)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

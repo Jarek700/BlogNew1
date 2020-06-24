@@ -14,8 +14,7 @@ namespace BlogNew1.Models
         
         public ActionResult Index()
         {
-            ArtykulyContext db = new ArtykulyContext();
-            var artykul = db.Artykuly;
+
             return View();
 
         }
@@ -38,29 +37,5 @@ namespace BlogNew1.Models
         {
                 return View();
         }
-
-
-        //-------- Dostęp do bazy przy urzciu ADO.NET - bezpośrednie zapytania do bazy danych
-        //string ArtykulyConnectionString = "Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = ArtykulyConnectionString; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
-
-        //string query = "Select Tytul, TekstArtykulu from dbo.Artykulies where id = @id";
-
-        //int id = 2;
-
-        //using (SqlConnection connection = new SqlConnection(ArtykulyConnectionString))
-        //{
-        //    SqlCommand command = new SqlCommand(query, connection);
-        //    command.Parameters.AddWithValue("@id", id);
-        //    connection.Open();
-        //    SqlDataReader reader = command.ExecuteReader();
-
-        //    reader.Read();
-
-        //    var Tytul = reader[0];
-        //    var TekstArtykulu = reader[1];
-
-        //    ViewBag.Tytul = Tytul;
-        //    ViewBag.TekstArtykulu = TekstArtykulu;
-        //}
     }
 }
