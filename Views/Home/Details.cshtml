@@ -1,0 +1,23 @@
+﻿@model BlogNew1.Models.Artykuly
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Tytul)</h2>
+
+<div>
+    <p>
+        @Html.DisplayFor(model => model.TekstArtykulu)
+    </p>
+
+
+    <p>
+        @Html.DisplayFor(model => model.DataDodania)
+    </p>
+
+</div>
+<p>
+
+    @Html.ActionLink("Strona Główna", "Index")
+</p>

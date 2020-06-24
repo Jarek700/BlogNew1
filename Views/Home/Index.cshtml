@@ -10,87 +10,36 @@
 </div>
 
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Tytul)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Wstep)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TekstArtykulu)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataDodania)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tytul)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Wstep)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TekstArtykulu)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataDodania)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-    }
+<div class="row">
+    <div class="col-md-2">
 
-</table>
-
-
-
-@*<div class="row">
+    </div>
+    <div class="col-md-8">
         @{
             foreach (var artykul in Model)
             {
-                <p>
-                    @artykul.Tytul , @artykul.TekstArtykulu
-                </p>
-                <div class="col-md-4">
+                <div class="article">
                     <h2>@artykul.Tytul</h2>
                     <p>
-                        @artykul.TekstArtykulu
+                        @artykul.TekstArtykulu.Substring(0, Math.Min(artykul.TekstArtykulu.Length, 250))...
                     </p>
-                    <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
+
+                    <div class="article-content">
+                        <p>@Html.ActionLink("Czytaj dalej", "Details", new { id = artykul.Id })</p>
+                    </div>
                 </div>
             }
         }
-    </div>*@
-
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>2JZ GTE wciąż wymiata</h2>
-        <p>
-            Dlaczego 2JZ "tu dżej zi" jest wciąż jednym z najlepszych silników do tuningu?
-        </p>
-        <p><a class="btn btn-default" href="https://linkdonikąd">Learn more &raquo;</a></p>
     </div>
 </div>
 
-<div>
-    @Html.Action("PokazGodzine", "Zegarek")
-    @* Controller Zegarek trzeba użyć bez słówka controller bo niedziała *@
-</div>
-<div>
-    Godzina2: @Html.Action("PokazGodzine2", "Zegarek")
-    @* Controller Zegarek trzeba użyć bez słówka controller bo niedziała *@
-</div>
+
+    <div>
+        @Html.Action("PokazGodzine", "Zegarek")
+        @* Controller Zegarek trzeba użyć bez słówka controller bo niedziała *@
+    </div>
+    <div>
+        @*Godzina2: @Html.Action("PokazGodzine2", "Zegarek")*@
+        @* Controller Zegarek trzeba użyć bez słówka controller bo niedziała *@
+    </div>

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,31 +12,25 @@ namespace BlogNew1.Models
     public class HomeController : Controller
     {
         // GET: Home
-        
+        private ArtykulyContext db = new ArtykulyContext();
         public ActionResult Index()
         {
 
-            return View();
+            return View(db.Artykuly.ToList());
 
         }
-       // [Authorize(Roles ="Admin")]                   //autoryzacja na później
-        [HttpPost]
-        public ActionResult DodajArtykul(Artykuly artykuly)
+        public ActionResult Details(int? id)
         {
-            //if (!ModelState.IsValid)                        // walidacja z negacją
-            //    return View("DodajArtykul", artykuly);
-            //else
+            if (id == null)
             {
-                ArtykulyContext db = new ArtykulyContext();
-                db.Artykuly.Add(artykuly);
-                db.SaveChanges();
-                return View("DodajArtykul");
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-        }
-        [HttpGet]
-        public ActionResult DodajArtykul()
-        {
-                return View();
+            Artykuly artykuly = db.Artykuly.Find(id);
+            if (artykuly == null)
+            {
+                return HttpNotFound();
+            }
+            return View(artykuly);
         }
     }
 }
