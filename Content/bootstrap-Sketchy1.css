@@ -163,7 +163,7 @@ sup {
 
 a {
   color: #333;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 
@@ -2892,6 +2892,7 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #17a2b8;
   border-color: #17a2b8;
+ 
 }
 
 .btn-info:hover {
@@ -3358,12 +3359,12 @@ fieldset:disabled a.btn {
 .btn-link {
   font-weight: 400;
   color: #333;
-  text-decoration: underline;
+  text-decoration-skip;
 }
 
 .btn-link:hover {
   color: #0d0d0d;
-  text-decoration: underline;
+  text-decoration-skip;
 }
 
 .btn-link:focus, .btn-link.focus {

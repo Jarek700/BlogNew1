@@ -3,31 +3,32 @@
     ViewBag.Title = "Strona główna";
 }
 
-<div class="jumbotron">
-    <h1>Blog o wszystkim</h1>
-    <p class="lead">Na tym blogu przeczytasz najbardziej niesamowite informacje dotyczące motoryzacji i ozdób balkonowych</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div class="jumbotron">
+        <h1>Blog o wszystkim</h1>
+        <p class="lead">Na tym blogu przeczytasz najbardziej niesamowite informacje dotyczące motoryzacji i ozdób balkonowych</p>
+        <p>@Html.ActionLink("Strona o mnie", "Index", "Omnie", new { area = "" }, new { @class="btn btn-primary btn-lg"})</p>
+        
+    </div>
 
 
 
 <div class="row">
-    <div class="col-md-2">
 
-    </div>
-    <div class="col-md-8">
+    <div class="col-md-12">
         @{
             foreach (var artykul in Model)
             {
                 <div class="article">
                     <h2>@artykul.Tytul</h2>
+                    <h6>Data dodania: @artykul.DataDodania</h6>
                     <p>
                         @artykul.TekstArtykulu.Substring(0, Math.Min(artykul.TekstArtykulu.Length, 250))...
                     </p>
-
-                    <div class="article-content">
-                        <p>@Html.ActionLink("Czytaj dalej", "Details", new { id = artykul.Id })</p>
+                    
+                    <div type=button>
+                        <button type="button" class="btn btn-info">@Html.ActionLink("Czytaj dalej", "Details", new { id = artykul.Id })</button>
                     </div>
+                    <br /><br />
                 </div>
             }
         }
